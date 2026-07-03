@@ -90,6 +90,14 @@ function sentenceFromTop(items: DistributionItem[], fallbackLabel: string) {
   return `${items[0].name} (${compactNumber.format(items[0].value)})`;
 }
 
+function shortenLabel(value: string, limit = 16) {
+  if (value.length <= limit) {
+    return value;
+  }
+
+  return `${value.slice(0, limit - 1)}…`;
+}
+
 function usePanelFocus() {
   const ref = useRef<HTMLElement | null>(null);
   const [isActive, setIsActive] = useState(false);
@@ -116,6 +124,22 @@ function usePanelFocus() {
   }, []);
 
   return { ref, isActive };
+}
+
+function useCompactLayout() {
+  const [isCompact, setIsCompact] = useState(false);
+
+  useEffect(() => {
+    const media = window.matchMedia("(max-width: 639px)");
+    const update = () => setIsCompact(media.matches);
+
+    update();
+    media.addEventListener("change", update);
+
+    return () => media.removeEventListener("change", update);
+  }, []);
+
+  return isCompact;
 }
 
 function StoryPanel({
@@ -280,6 +304,7 @@ function App() {
   const [country, setCountry] = useState<CountryContext | null>(null);
   const [populationSeries, setPopulationSeries] = useState<PopulationSeriesPoint[]>([]);
   const [error, setError] = useState<string | null>(null);
+  const isCompact = useCompactLayout();
 
   useEffect(() => {
     const controller = new AbortController();
@@ -571,18 +596,19 @@ function App() {
                 />
                 <div className="split-chart">
                   <div className="chart-shell">
-                    <ResponsiveContainer width="100%" height={300}>
-                      <BarChart data={descriptive.distributions.byEthnicity}>
-                        <CartesianGrid stroke="rgba(255,255,255,0.08)" vertical={false} />
-                        <XAxis
-                          dataKey="name"
-                          stroke="#9fb0d9"
-                          tickLine={false}
-                          interval={0}
-                          angle={-18}
-                          textAnchor="end"
-                          height={90}
-                        />
+                  <ResponsiveContainer width="100%" height={300}>
+                    <BarChart data={descriptive.distributions.byEthnicity}>
+                      <CartesianGrid stroke="rgba(255,255,255,0.08)" vertical={false} />
+                      <XAxis
+                        dataKey="name"
+                        tickFormatter={(value) => shortenLabel(String(value), isCompact ? 10 : 16)}
+                        stroke="#9fb0d9"
+                        tickLine={false}
+                        interval={0}
+                        angle={isCompact ? -28 : -18}
+                        textAnchor="end"
+                        height={isCompact ? 110 : 90}
+                      />
                         <YAxis stroke="#9fb0d9" tickLine={false} />
                         <Tooltip formatter={(value) => fullNumber.format(Number(value))} />
                         <Bar
@@ -740,23 +766,44 @@ function App() {
                 />
                 <div className="chart-shell">
                   <ResponsiveContainer width="100%" height={340}>
-                    <BarChart data={diagnostic.byReason}>
+                    <BarChart
+                      data={diagnostic.byReason}
+                      layout={isCompact ? "vertical" : "horizontal"}
+                      margin={isCompact ? { left: 10, right: 10 } : undefined}
+                    >
                       <CartesianGrid stroke="rgba(255,255,255,0.08)" vertical={false} />
-                      <XAxis
-                        dataKey="name"
-                        stroke="#9fb0d9"
-                        tickLine={false}
-                        interval={0}
-                        angle={-18}
-                        textAnchor="end"
-                        height={90}
-                      />
-                      <YAxis stroke="#9fb0d9" tickLine={false} />
+                      {isCompact ? (
+                        <>
+                          <XAxis type="number" stroke="#9fb0d9" tickLine={false} />
+                          <YAxis
+                            dataKey="name"
+                            type="category"
+                            width={132}
+                            stroke="#9fb0d9"
+                            tickLine={false}
+                            tickFormatter={(value) => shortenLabel(String(value), 18)}
+                          />
+                        </>
+                      ) : (
+                        <>
+                          <XAxis
+                            dataKey="name"
+                            stroke="#9fb0d9"
+                            tickLine={false}
+                            interval={0}
+                            angle={-18}
+                            textAnchor="end"
+                            height={90}
+                            tickFormatter={(value) => shortenLabel(String(value), 18)}
+                          />
+                          <YAxis stroke="#9fb0d9" tickLine={false} />
+                        </>
+                      )}
                       <Tooltip formatter={(value) => formatDays(Number(value))} />
                       <Bar
                         dataKey="avgDays"
                         fill="#ff6b6b"
-                        radius={[10, 10, 0, 0]}
+                        radius={isCompact ? [0, 10, 10, 0] : [10, 10, 0, 0]}
                         isAnimationActive={isActive}
                         animationDuration={950}
                       />
@@ -799,23 +846,44 @@ function App() {
                 />
                 <div className="chart-shell">
                   <ResponsiveContainer width="100%" height={340}>
-                    <BarChart data={diagnostic.byObservedMotivation}>
+                    <BarChart
+                      data={diagnostic.byObservedMotivation}
+                      layout={isCompact ? "vertical" : "horizontal"}
+                      margin={isCompact ? { left: 10, right: 10 } : undefined}
+                    >
                       <CartesianGrid stroke="rgba(255,255,255,0.08)" vertical={false} />
-                      <XAxis
-                        dataKey="name"
-                        stroke="#9fb0d9"
-                        tickLine={false}
-                        interval={0}
-                        angle={-18}
-                        textAnchor="end"
-                        height={96}
-                      />
-                      <YAxis stroke="#9fb0d9" tickLine={false} />
+                      {isCompact ? (
+                        <>
+                          <XAxis type="number" stroke="#9fb0d9" tickLine={false} />
+                          <YAxis
+                            dataKey="name"
+                            type="category"
+                            width={132}
+                            stroke="#9fb0d9"
+                            tickLine={false}
+                            tickFormatter={(value) => shortenLabel(String(value), 18)}
+                          />
+                        </>
+                      ) : (
+                        <>
+                          <XAxis
+                            dataKey="name"
+                            stroke="#9fb0d9"
+                            tickLine={false}
+                            interval={0}
+                            angle={-18}
+                            textAnchor="end"
+                            height={96}
+                            tickFormatter={(value) => shortenLabel(String(value), 18)}
+                          />
+                          <YAxis stroke="#9fb0d9" tickLine={false} />
+                        </>
+                      )}
                       <Tooltip formatter={(value) => formatDays(Number(value))} />
                       <Bar
                         dataKey="avgDays"
                         fill="#8d7dff"
-                        radius={[10, 10, 0, 0]}
+                        radius={isCompact ? [0, 10, 10, 0] : [10, 10, 0, 0]}
                         isAnimationActive={isActive}
                         animationDuration={980}
                       />
