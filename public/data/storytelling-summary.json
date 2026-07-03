@@ -1,926 +1,1205 @@
 {
-  "generatedAt": "2026-07-03T01:09:34.731Z",
+  "generatedAt": "2026-07-03T02:31:44.810Z",
   "period": {
     "fromYear": 2017,
     "toYear": 2025
   },
-  "metrics": {
-    "totalCases": 75699,
-    "activeCases": 2557,
-    "resolvedCases": 73142,
-    "resolutionRate": 0.9662214824502305,
-    "averageSolutionDays": 38.2335762431468
+  "descriptive": {
+    "metrics": {
+      "totalCases": 75699,
+      "activeCases": 2557,
+      "resolvedCases": 73142,
+      "resolutionRate": 0.9662214824502305,
+      "averageSolutionDays": 38.2335762431468
+    },
+    "distributions": {
+      "byStatus": [
+        {
+          "name": "DESAPARICIÓN VOLUNTARIA",
+          "value": 63555
+        },
+        {
+          "name": "EXTRAVÍO",
+          "value": 6316
+        },
+        {
+          "name": "DESAPARICIÓN INVOLUNTARIA",
+          "value": 3271
+        },
+        {
+          "name": "EN INVESTIGACIÓN",
+          "value": 2557
+        }
+      ],
+      "byAgeRange": [
+        {
+          "name": "ADOLESCENTES",
+          "value": 38087
+        },
+        {
+          "name": "ADULTO",
+          "value": 29996
+        },
+        {
+          "name": "NIÑOS(AS)",
+          "value": 4629
+        },
+        {
+          "name": "ADULTO MAYOR",
+          "value": 2982
+        },
+        {
+          "name": "SIN_DATO",
+          "value": 5
+        }
+      ],
+      "bySex": [
+        {
+          "name": "MUJER",
+          "value": 47285
+        },
+        {
+          "name": "HOMBRE",
+          "value": 28414
+        }
+      ],
+      "byEthnicity": [
+        {
+          "name": "MESTIZO/A",
+          "value": 65684
+        },
+        {
+          "name": "INDIGENA",
+          "value": 3858
+        },
+        {
+          "name": "AFRO",
+          "value": 2112
+        },
+        {
+          "name": "BLANCO/A",
+          "value": 1245
+        },
+        {
+          "name": "OTROS",
+          "value": 966
+        },
+        {
+          "name": "MONTUBIO/A",
+          "value": 863
+        },
+        {
+          "name": "MULATO/A",
+          "value": 727
+        },
+        {
+          "name": "SIN_DATO",
+          "value": 205
+        }
+      ],
+      "byProvince": [
+        {
+          "name": "PICHINCHA",
+          "value": 18495
+        },
+        {
+          "name": "GUAYAS",
+          "value": 17649
+        },
+        {
+          "name": "MANABÍ",
+          "value": 3759
+        },
+        {
+          "name": "AZUAY",
+          "value": 3568
+        },
+        {
+          "name": "EL ORO",
+          "value": 3293
+        },
+        {
+          "name": "LOS RÍOS",
+          "value": 3174
+        },
+        {
+          "name": "STO DGO DE LOS TSÁCHILAS",
+          "value": 3045
+        },
+        {
+          "name": "CHIMBORAZO",
+          "value": 2956
+        },
+        {
+          "name": "TUNGURAHUA",
+          "value": 2700
+        },
+        {
+          "name": "COTOPAXI",
+          "value": 2210
+        }
+      ],
+      "byDistrict": [
+        {
+          "name": "ELOY ALFARO - DMQ",
+          "value": 3259
+        },
+        {
+          "name": "QUITUMBE",
+          "value": 3116
+        },
+        {
+          "name": "EUGENIO ESPEJO",
+          "value": 2896
+        },
+        {
+          "name": "NUEVA PROSPERINA",
+          "value": 2431
+        },
+        {
+          "name": "LA DELICIA",
+          "value": 2414
+        },
+        {
+          "name": "RIOBAMBA",
+          "value": 2189
+        },
+        {
+          "name": "MACHALA",
+          "value": 1976
+        },
+        {
+          "name": "MANUELA SÁENZ",
+          "value": 1771
+        },
+        {
+          "name": "CUENCA NORTE",
+          "value": 1560
+        },
+        {
+          "name": "LOJA",
+          "value": 1537
+        }
+      ],
+      "byCircuit": [
+        {
+          "name": "CENTRO",
+          "value": 941
+        },
+        {
+          "name": "GUAMANÍ",
+          "value": 784
+        },
+        {
+          "name": "MONTE SINAÍ",
+          "value": 769
+        },
+        {
+          "name": "COCHAPAMBA",
+          "value": 651
+        },
+        {
+          "name": "ECUATORIANA",
+          "value": 619
+        },
+        {
+          "name": "CHILLOGALLO",
+          "value": 606
+        },
+        {
+          "name": "TERMINAL TERRESTRE",
+          "value": 587
+        },
+        {
+          "name": "DIVINO NIÑO",
+          "value": 562
+        },
+        {
+          "name": "BOMBOLI",
+          "value": 549
+        },
+        {
+          "name": "GUASMO",
+          "value": 548
+        }
+      ]
+    },
+    "timelines": {
+      "byMonth": [
+        {
+          "label": "2024-01",
+          "total": 626
+        },
+        {
+          "label": "2024-02",
+          "total": 639
+        },
+        {
+          "label": "2024-03",
+          "total": 596
+        },
+        {
+          "label": "2024-04",
+          "total": 582
+        },
+        {
+          "label": "2024-05",
+          "total": 595
+        },
+        {
+          "label": "2024-06",
+          "total": 627
+        },
+        {
+          "label": "2024-07",
+          "total": 577
+        },
+        {
+          "label": "2024-08",
+          "total": 602
+        },
+        {
+          "label": "2024-09",
+          "total": 554
+        },
+        {
+          "label": "2024-10",
+          "total": 584
+        },
+        {
+          "label": "2024-11",
+          "total": 549
+        },
+        {
+          "label": "2024-12",
+          "total": 563
+        },
+        {
+          "label": "2025-01",
+          "total": 649
+        },
+        {
+          "label": "2025-02",
+          "total": 584
+        },
+        {
+          "label": "2025-03",
+          "total": 659
+        },
+        {
+          "label": "2025-04",
+          "total": 598
+        },
+        {
+          "label": "2025-05",
+          "total": 679
+        },
+        {
+          "label": "2025-06",
+          "total": 633
+        },
+        {
+          "label": "2025-07",
+          "total": 595
+        },
+        {
+          "label": "2025-08",
+          "total": 628
+        },
+        {
+          "label": "2025-09",
+          "total": 596
+        },
+        {
+          "label": "2025-10",
+          "total": 632
+        },
+        {
+          "label": "2025-11",
+          "total": 623
+        },
+        {
+          "label": "2025-12",
+          "total": 629
+        }
+      ],
+      "byYear": [
+        {
+          "label": "2017",
+          "total": 10479
+        },
+        {
+          "label": "2018",
+          "total": 10274
+        },
+        {
+          "label": "2019",
+          "total": 9982
+        },
+        {
+          "label": "2020",
+          "total": 6774
+        },
+        {
+          "label": "2021",
+          "total": 7974
+        },
+        {
+          "label": "2022",
+          "total": 7757
+        },
+        {
+          "label": "2023",
+          "total": 7860
+        },
+        {
+          "label": "2024",
+          "total": 7094
+        },
+        {
+          "label": "2025",
+          "total": 7505
+        }
+      ]
+    },
+    "hotspots": [
+      {
+        "province": "GUAYAS",
+        "lat": -2.1,
+        "lon": -79.96,
+        "total": 362,
+        "women": 219,
+        "men": 143
+      },
+      {
+        "province": "STO DGO DE LOS TSÁCHILAS",
+        "lat": -0.25,
+        "lon": -79.19,
+        "total": 350,
+        "women": 211,
+        "men": 139
+      },
+      {
+        "province": "PICHINCHA",
+        "lat": -0.29,
+        "lon": -78.57,
+        "total": 338,
+        "women": 205,
+        "men": 133
+      },
+      {
+        "province": "GUAYAS",
+        "lat": -2.24,
+        "lon": -79.92,
+        "total": 293,
+        "women": 172,
+        "men": 121
+      },
+      {
+        "province": "PICHINCHA",
+        "lat": -0.27,
+        "lon": -78.54,
+        "total": 281,
+        "women": 186,
+        "men": 95
+      },
+      {
+        "province": "EL ORO",
+        "lat": -3.26,
+        "lon": -79.96,
+        "total": 280,
+        "women": 178,
+        "men": 102
+      },
+      {
+        "province": "GUAYAS",
+        "lat": -2.19,
+        "lon": -79.89,
+        "total": 266,
+        "women": 146,
+        "men": 120
+      },
+      {
+        "province": "PICHINCHA",
+        "lat": -0.22,
+        "lon": -78.51,
+        "total": 266,
+        "women": 137,
+        "men": 129
+      },
+      {
+        "province": "PICHINCHA",
+        "lat": -0.24,
+        "lon": -78.53,
+        "total": 260,
+        "women": 178,
+        "men": 82
+      },
+      {
+        "province": "PICHINCHA",
+        "lat": -0.33,
+        "lon": -78.57,
+        "total": 259,
+        "women": 155,
+        "men": 104
+      },
+      {
+        "province": "MORONA SANTIAGO",
+        "lat": -2.31,
+        "lon": -78.12,
+        "total": 251,
+        "women": 176,
+        "men": 75
+      },
+      {
+        "province": "PICHINCHA",
+        "lat": -0.12,
+        "lon": -78.47,
+        "total": 249,
+        "women": 144,
+        "men": 105
+      },
+      {
+        "province": "PICHINCHA",
+        "lat": -0.22,
+        "lon": -78.52,
+        "total": 243,
+        "women": 156,
+        "men": 87
+      },
+      {
+        "province": "GUAYAS",
+        "lat": -2.25,
+        "lon": -79.89,
+        "total": 239,
+        "women": 134,
+        "men": 105
+      },
+      {
+        "province": "GUAYAS",
+        "lat": -2.17,
+        "lon": -79.84,
+        "total": 237,
+        "women": 135,
+        "men": 102
+      },
+      {
+        "province": "CHIMBORAZO",
+        "lat": -1.67,
+        "lon": -78.66,
+        "total": 234,
+        "women": 155,
+        "men": 79
+      },
+      {
+        "province": "PICHINCHA",
+        "lat": -0.31,
+        "lon": -78.56,
+        "total": 230,
+        "women": 135,
+        "men": 95
+      },
+      {
+        "province": "PICHINCHA",
+        "lat": -0.26,
+        "lon": -78.52,
+        "total": 228,
+        "women": 152,
+        "men": 76
+      },
+      {
+        "province": "GUAYAS",
+        "lat": -2.28,
+        "lon": -79.88,
+        "total": 227,
+        "women": 119,
+        "men": 108
+      },
+      {
+        "province": "GUAYAS",
+        "lat": -2.07,
+        "lon": -79.93,
+        "total": 221,
+        "women": 137,
+        "men": 84
+      },
+      {
+        "province": "GUAYAS",
+        "lat": -2.12,
+        "lon": -80,
+        "total": 215,
+        "women": 130,
+        "men": 85
+      },
+      {
+        "province": "PICHINCHA",
+        "lat": -0.1,
+        "lon": -78.42,
+        "total": 213,
+        "women": 117,
+        "men": 96
+      },
+      {
+        "province": "PICHINCHA",
+        "lat": -0.24,
+        "lon": -78.52,
+        "total": 212,
+        "women": 134,
+        "men": 78
+      },
+      {
+        "province": "PICHINCHA",
+        "lat": -0.21,
+        "lon": -78.5,
+        "total": 203,
+        "women": 118,
+        "men": 85
+      },
+      {
+        "province": "PICHINCHA",
+        "lat": -0.25,
+        "lon": -78.52,
+        "total": 199,
+        "women": 118,
+        "men": 81
+      },
+      {
+        "province": "GUAYAS",
+        "lat": -2.08,
+        "lon": -79.93,
+        "total": 198,
+        "women": 120,
+        "men": 78
+      },
+      {
+        "province": "PICHINCHA",
+        "lat": -0.09,
+        "lon": -78.45,
+        "total": 197,
+        "women": 121,
+        "men": 76
+      },
+      {
+        "province": "PICHINCHA",
+        "lat": -0.12,
+        "lon": -78.5,
+        "total": 189,
+        "women": 110,
+        "men": 79
+      },
+      {
+        "province": "CHIMBORAZO",
+        "lat": -1.67,
+        "lon": -78.65,
+        "total": 188,
+        "women": 107,
+        "men": 81
+      },
+      {
+        "province": "PICHINCHA",
+        "lat": -0.26,
+        "lon": -78.55,
+        "total": 188,
+        "women": 123,
+        "men": 65
+      },
+      {
+        "province": "PICHINCHA",
+        "lat": -0.3,
+        "lon": -78.56,
+        "total": 181,
+        "women": 114,
+        "men": 67
+      },
+      {
+        "province": "PICHINCHA",
+        "lat": -0.2,
+        "lon": -78.49,
+        "total": 178,
+        "women": 77,
+        "men": 101
+      },
+      {
+        "province": "GUAYAS",
+        "lat": -2.2,
+        "lon": -79.91,
+        "total": 178,
+        "women": 100,
+        "men": 78
+      },
+      {
+        "province": "PICHINCHA",
+        "lat": -0.31,
+        "lon": -78.5,
+        "total": 174,
+        "women": 91,
+        "men": 83
+      },
+      {
+        "province": "IMBABURA",
+        "lat": 0.23,
+        "lon": -78.26,
+        "total": 172,
+        "women": 109,
+        "men": 63
+      },
+      {
+        "province": "PICHINCHA",
+        "lat": -0.19,
+        "lon": -78.51,
+        "total": 172,
+        "women": 104,
+        "men": 68
+      },
+      {
+        "province": "GUAYAS",
+        "lat": -2.22,
+        "lon": -79.94,
+        "total": 171,
+        "women": 95,
+        "men": 76
+      },
+      {
+        "province": "GUAYAS",
+        "lat": -2.21,
+        "lon": -79.91,
+        "total": 169,
+        "women": 89,
+        "men": 80
+      },
+      {
+        "province": "LOS RÍOS",
+        "lat": -1.01,
+        "lon": -79.47,
+        "total": 168,
+        "women": 136,
+        "men": 32
+      },
+      {
+        "province": "LOJA",
+        "lat": -4,
+        "lon": -79.2,
+        "total": 166,
+        "women": 100,
+        "men": 66
+      },
+      {
+        "province": "COTOPAXI",
+        "lat": -0.93,
+        "lon": -78.62,
+        "total": 165,
+        "women": 100,
+        "men": 65
+      },
+      {
+        "province": "ESMERALDAS",
+        "lat": 0.97,
+        "lon": -79.65,
+        "total": 165,
+        "women": 88,
+        "men": 77
+      },
+      {
+        "province": "PICHINCHA",
+        "lat": -0.09,
+        "lon": -78.47,
+        "total": 165,
+        "women": 79,
+        "men": 86
+      },
+      {
+        "province": "PICHINCHA",
+        "lat": -0.09,
+        "lon": -78.51,
+        "total": 164,
+        "women": 103,
+        "men": 61
+      },
+      {
+        "province": "PICHINCHA",
+        "lat": -0.33,
+        "lon": -78.45,
+        "total": 162,
+        "women": 94,
+        "men": 68
+      },
+      {
+        "province": "GUAYAS",
+        "lat": -2.27,
+        "lon": -79.88,
+        "total": 160,
+        "women": 100,
+        "men": 60
+      },
+      {
+        "province": "GUAYAS",
+        "lat": -2.13,
+        "lon": -79.94,
+        "total": 159,
+        "women": 100,
+        "men": 59
+      },
+      {
+        "province": "GUAYAS",
+        "lat": -2.23,
+        "lon": -79.94,
+        "total": 157,
+        "women": 96,
+        "men": 61
+      },
+      {
+        "province": "AZUAY",
+        "lat": -2.9,
+        "lon": -79.03,
+        "total": 157,
+        "women": 79,
+        "men": 78
+      },
+      {
+        "province": "PICHINCHA",
+        "lat": -0.21,
+        "lon": -78.4,
+        "total": 157,
+        "women": 87,
+        "men": 70
+      },
+      {
+        "province": "GUAYAS",
+        "lat": -2.2,
+        "lon": -79.9,
+        "total": 157,
+        "women": 89,
+        "men": 68
+      },
+      {
+        "province": "GUAYAS",
+        "lat": -2.16,
+        "lon": -79.92,
+        "total": 154,
+        "women": 91,
+        "men": 63
+      },
+      {
+        "province": "MORONA SANTIAGO",
+        "lat": -2.46,
+        "lon": -78.17,
+        "total": 154,
+        "women": 123,
+        "men": 31
+      },
+      {
+        "province": "GUAYAS",
+        "lat": -2.12,
+        "lon": -79.95,
+        "total": 153,
+        "women": 81,
+        "men": 72
+      },
+      {
+        "province": "AZUAY",
+        "lat": -2.9,
+        "lon": -79.01,
+        "total": 151,
+        "women": 95,
+        "men": 56
+      },
+      {
+        "province": "PICHINCHA",
+        "lat": -0.13,
+        "lon": -78.51,
+        "total": 150,
+        "women": 84,
+        "men": 66
+      },
+      {
+        "province": "PICHINCHA",
+        "lat": -0.29,
+        "lon": -78.55,
+        "total": 150,
+        "women": 90,
+        "men": 60
+      },
+      {
+        "province": "GUAYAS",
+        "lat": -2.21,
+        "lon": -79.93,
+        "total": 150,
+        "women": 88,
+        "men": 62
+      },
+      {
+        "province": "AZUAY",
+        "lat": -2.9,
+        "lon": -79,
+        "total": 148,
+        "women": 90,
+        "men": 58
+      },
+      {
+        "province": "PICHINCHA",
+        "lat": -0.29,
+        "lon": -78.52,
+        "total": 147,
+        "women": 89,
+        "men": 58
+      }
+    ]
   },
-  "distributions": {
-    "byStatus": [
+  "diagnostic": {
+    "byReason": [
       {
-        "name": "DESAPARICIÓN VOLUNTARIA",
-        "value": 63555
+        "name": "CERRADO POR FISCALÍA / DELITO REFORMULADO",
+        "count": 258,
+        "avgDays": 109.49,
+        "medianDays": 8.5,
+        "minDays": 0,
+        "maxDays": 1803
       },
       {
-        "name": "EXTRAVÍO",
-        "value": 6316
+        "name": "CAUSAS ECONÓMICAS",
+        "count": 634,
+        "avgDays": 90.42,
+        "medianDays": 17,
+        "minDays": 0,
+        "maxDays": 2581
       },
       {
-        "name": "DESAPARICIÓN INVOLUNTARIA",
-        "value": 3271
+        "name": "FALLECIDO",
+        "count": 2660,
+        "avgDays": 57.55,
+        "medianDays": 7,
+        "minDays": 0,
+        "maxDays": 1709
       },
       {
-        "name": "EN INVESTIGACIÓN",
-        "value": 2557
+        "name": "CAUSAS PERSONALES",
+        "count": 7083,
+        "avgDays": 44.25,
+        "medianDays": 8,
+        "minDays": 0,
+        "maxDays": 2899
+      },
+      {
+        "name": "CAUSAS FAMILIARES",
+        "count": 35841,
+        "avgDays": 41.58,
+        "medianDays": 7,
+        "minDays": 0,
+        "maxDays": 2406
+      },
+      {
+        "name": "CAUSAS SOCIALES",
+        "count": 16259,
+        "avgDays": 30.18,
+        "medianDays": 5,
+        "minDays": 0,
+        "maxDays": 2538
+      },
+      {
+        "name": "VIOLENCIA",
+        "count": 3077,
+        "avgDays": 30.01,
+        "medianDays": 6,
+        "minDays": 0,
+        "maxDays": 2161
+      },
+      {
+        "name": "DISCRIMINACIÓN",
+        "count": 6,
+        "avgDays": 25.5,
+        "medianDays": 27.5,
+        "minDays": 5,
+        "maxDays": 54
       }
     ],
-    "byAgeRange": [
+    "byObservedMotivation": [
       {
-        "name": "ADOLESCENTES",
-        "value": 38087
+        "name": "MIGRACIÓN/MOVILIDAD HUMANA",
+        "count": 315,
+        "avgDays": 168.7,
+        "medianDays": 41,
+        "minDays": 1,
+        "maxDays": 2365
       },
       {
-        "name": "ADULTO",
-        "value": 29996
+        "name": "JUICIO DE ALIMENTOS",
+        "count": 16,
+        "avgDays": 152.38,
+        "medianDays": 15,
+        "minDays": 1,
+        "maxDays": 1744
       },
       {
-        "name": "NIÑOS(AS)",
-        "value": 4629
+        "name": "CERRADO POR FISCALÍA / DELITO REFORMULADO",
+        "count": 258,
+        "avgDays": 109.49,
+        "medianDays": 8.5,
+        "minDays": 0,
+        "maxDays": 1803
       },
       {
-        "name": "ADULTO MAYOR",
-        "value": 2982
+        "name": "DETENCIÓN",
+        "count": 55,
+        "avgDays": 106.11,
+        "medianDays": 22,
+        "minDays": 1,
+        "maxDays": 2538
+      },
+      {
+        "name": "MUERTE NATURAL",
+        "count": 152,
+        "avgDays": 104.39,
+        "medianDays": 17.5,
+        "minDays": 0,
+        "maxDays": 856
+      },
+      {
+        "name": "DEUDAS",
+        "count": 618,
+        "avgDays": 88.82,
+        "medianDays": 17,
+        "minDays": 0,
+        "maxDays": 2581
       },
       {
         "name": "SIN_DATO",
-        "value": 5
-      }
-    ],
-    "bySex": [
-      {
-        "name": "MUJER",
-        "value": 47285
+        "count": 1032,
+        "avgDays": 77.9,
+        "medianDays": 10,
+        "minDays": 0,
+        "maxDays": 1709
       },
       {
-        "name": "HOMBRE",
-        "value": 28414
-      }
-    ],
-    "byProvince": [
-      {
-        "name": "PICHINCHA",
-        "value": 18495
-      },
-      {
-        "name": "GUAYAS",
-        "value": 17649
-      },
-      {
-        "name": "MANABÍ",
-        "value": 3759
-      },
-      {
-        "name": "AZUAY",
-        "value": 3568
-      },
-      {
-        "name": "EL ORO",
-        "value": 3293
-      },
-      {
-        "name": "LOS RÍOS",
-        "value": 3174
-      },
-      {
-        "name": "STO DGO DE LOS TSÁCHILAS",
-        "value": 3045
-      },
-      {
-        "name": "CHIMBORAZO",
-        "value": 2956
-      },
-      {
-        "name": "TUNGURAHUA",
-        "value": 2700
-      },
-      {
-        "name": "COTOPAXI",
-        "value": 2210
-      }
-    ],
-    "byMotivation": [
-      {
-        "name": "RELACIÓN AFECTIVA",
-        "value": 20903
-      },
-      {
-        "name": "NO RELACIONADOS A VIOLENCIA",
-        "value": 16749
-      },
-      {
-        "name": "CIRCUNSTANCIAL",
-        "value": 15842
-      },
-      {
-        "name": "NO_APLICA",
-        "value": 2557
-      },
-      {
-        "name": "DROGADICCIÓN",
-        "value": 2339
-      },
-      {
-        "name": "DISCAPACIDAD PSICOSOCIAL",
-        "value": 2086
-      },
-      {
-        "name": "ALCOHOLISMO",
-        "value": 1681
-      },
-      {
-        "name": "VIOLENCIA PSICOLÓGICA",
-        "value": 1453
+        "name": "SECUESTRO EXTORSIVO (CON RESULTADO DE MUERTE)",
+        "count": 7,
+        "avgDays": 66.86,
+        "medianDays": 9,
+        "minDays": 3,
+        "maxDays": 419
       }
     ]
   },
-  "timelines": {
-    "byMonth": [
-      {
-        "month": "2024-01",
-        "total": 626
+  "predictive": {
+    "modelSummary": {
+      "modelName": "DecisionTreeClassifier",
+      "targetDefinition": "1 si el caso se mantiene en EN INVESTIGACIÓN; 0 si ya fue solucionado.",
+      "trainingNote": "Modelo reproducido desde el notebook con max_depth=5, class_weight='balanced' y random_state=42.",
+      "features": [
+        "sexo",
+        "edad",
+        "circuito"
+      ],
+      "testSize": 0.2,
+      "accuracy": 0.69,
+      "confusionMatrix": {
+        "labels": [
+          "Caso Solucionado",
+          "Riesgo Crítico"
+        ],
+        "derivedFromRoundedReport": true,
+        "values": [
+          {
+            "actual": "Caso Solucionado",
+            "predicted": "Caso Solucionado",
+            "value": 10025
+          },
+          {
+            "actual": "Caso Solucionado",
+            "predicted": "Riesgo Crítico",
+            "value": 4604
+          },
+          {
+            "actual": "Riesgo Crítico",
+            "predicted": "Caso Solucionado",
+            "value": 157
+          },
+          {
+            "actual": "Riesgo Crítico",
+            "predicted": "Riesgo Crítico",
+            "value": 354
+          }
+        ]
       },
-      {
-        "month": "2024-02",
-        "total": 639
-      },
-      {
-        "month": "2024-03",
-        "total": 596
-      },
-      {
-        "month": "2024-04",
-        "total": 582
-      },
-      {
-        "month": "2024-05",
-        "total": 595
-      },
-      {
-        "month": "2024-06",
-        "total": 627
-      },
-      {
-        "month": "2024-07",
-        "total": 577
-      },
-      {
-        "month": "2024-08",
-        "total": 602
-      },
-      {
-        "month": "2024-09",
-        "total": 554
-      },
-      {
-        "month": "2024-10",
-        "total": 584
-      },
-      {
-        "month": "2024-11",
-        "total": 549
-      },
-      {
-        "month": "2024-12",
-        "total": 563
-      },
-      {
-        "month": "2025-01",
-        "total": 649
-      },
-      {
-        "month": "2025-02",
-        "total": 584
-      },
-      {
-        "month": "2025-03",
-        "total": 659
-      },
-      {
-        "month": "2025-04",
-        "total": 598
-      },
-      {
-        "month": "2025-05",
-        "total": 679
-      },
-      {
-        "month": "2025-06",
-        "total": 633
-      },
-      {
-        "month": "2025-07",
-        "total": 595
-      },
-      {
-        "month": "2025-08",
-        "total": 628
-      },
-      {
-        "month": "2025-09",
-        "total": 596
-      },
-      {
-        "month": "2025-10",
-        "total": 632
-      },
-      {
-        "month": "2025-11",
-        "total": 623
-      },
-      {
-        "month": "2025-12",
-        "total": 629
-      }
-    ],
-    "byYear": [
-      {
-        "year": "2017",
-        "total": 10479
-      },
-      {
-        "year": "2018",
-        "total": 10274
-      },
-      {
-        "year": "2019",
-        "total": 9982
-      },
-      {
-        "year": "2020",
-        "total": 6774
-      },
-      {
-        "year": "2021",
-        "total": 7974
-      },
-      {
-        "year": "2022",
-        "total": 7757
-      },
-      {
-        "year": "2023",
-        "total": 7860
-      },
-      {
-        "year": "2024",
-        "total": 7094
-      },
-      {
-        "year": "2025",
-        "total": 7505
-      }
-    ],
-    "provinceTrendByMonth": [
-      {
-        "month": "2024-07",
-        "PICHINCHA": 127,
-        "GUAYAS": 126,
-        "MANABÍ": 30,
-        "AZUAY": 29,
-        "EL ORO": 33,
-        "LOS RÍOS": 32
-      },
-      {
-        "month": "2024-08",
-        "PICHINCHA": 129,
-        "GUAYAS": 148,
-        "MANABÍ": 34,
-        "AZUAY": 46,
-        "EL ORO": 48,
-        "LOS RÍOS": 31
-      },
-      {
-        "month": "2024-09",
-        "PICHINCHA": 130,
-        "GUAYAS": 125,
-        "MANABÍ": 27,
-        "AZUAY": 29,
-        "EL ORO": 16,
-        "LOS RÍOS": 32
-      },
-      {
-        "month": "2024-10",
-        "PICHINCHA": 168,
-        "GUAYAS": 134,
-        "MANABÍ": 41,
-        "AZUAY": 30,
-        "EL ORO": 21,
-        "LOS RÍOS": 24
-      },
-      {
-        "month": "2024-11",
-        "PICHINCHA": 142,
-        "GUAYAS": 120,
-        "MANABÍ": 21,
-        "AZUAY": 16,
-        "EL ORO": 31,
-        "LOS RÍOS": 27
-      },
-      {
-        "month": "2024-12",
-        "PICHINCHA": 130,
-        "GUAYAS": 143,
-        "MANABÍ": 45,
-        "AZUAY": 27,
-        "EL ORO": 28,
-        "LOS RÍOS": 17
-      },
-      {
-        "month": "2025-01",
-        "PICHINCHA": 140,
-        "GUAYAS": 163,
-        "MANABÍ": 41,
-        "AZUAY": 29,
-        "EL ORO": 34,
-        "LOS RÍOS": 31
-      },
-      {
-        "month": "2025-02",
-        "PICHINCHA": 128,
-        "GUAYAS": 129,
-        "MANABÍ": 33,
-        "AZUAY": 19,
-        "EL ORO": 27,
-        "LOS RÍOS": 33
-      },
-      {
-        "month": "2025-03",
-        "PICHINCHA": 149,
-        "GUAYAS": 157,
-        "MANABÍ": 35,
-        "AZUAY": 22,
-        "EL ORO": 30,
-        "LOS RÍOS": 24
-      },
-      {
-        "month": "2025-04",
-        "PICHINCHA": 144,
-        "GUAYAS": 124,
-        "MANABÍ": 27,
-        "AZUAY": 29,
-        "EL ORO": 24,
-        "LOS RÍOS": 24
-      },
-      {
-        "month": "2025-05",
-        "PICHINCHA": 195,
-        "GUAYAS": 124,
-        "MANABÍ": 37,
-        "AZUAY": 34,
-        "EL ORO": 27,
-        "LOS RÍOS": 32
-      },
-      {
-        "month": "2025-06",
-        "PICHINCHA": 172,
-        "GUAYAS": 135,
-        "MANABÍ": 23,
-        "AZUAY": 45,
-        "EL ORO": 30,
-        "LOS RÍOS": 19
-      },
-      {
-        "month": "2025-07",
-        "PICHINCHA": 132,
-        "GUAYAS": 136,
-        "MANABÍ": 49,
-        "AZUAY": 36,
-        "EL ORO": 30,
-        "LOS RÍOS": 34
-      },
-      {
-        "month": "2025-08",
-        "PICHINCHA": 138,
-        "GUAYAS": 156,
-        "MANABÍ": 51,
-        "AZUAY": 32,
-        "EL ORO": 43,
-        "LOS RÍOS": 34
-      },
-      {
-        "month": "2025-09",
-        "PICHINCHA": 129,
-        "GUAYAS": 171,
-        "MANABÍ": 29,
-        "AZUAY": 39,
-        "EL ORO": 33,
-        "LOS RÍOS": 26
-      },
-      {
-        "month": "2025-10",
-        "PICHINCHA": 158,
-        "GUAYAS": 158,
-        "MANABÍ": 25,
-        "AZUAY": 23,
-        "EL ORO": 27,
-        "LOS RÍOS": 31
-      },
-      {
-        "month": "2025-11",
-        "PICHINCHA": 129,
-        "GUAYAS": 158,
-        "MANABÍ": 41,
-        "AZUAY": 31,
-        "EL ORO": 33,
-        "LOS RÍOS": 27
-      },
-      {
-        "month": "2025-12",
-        "PICHINCHA": 130,
-        "GUAYAS": 161,
-        "MANABÍ": 37,
-        "AZUAY": 29,
-        "EL ORO": 21,
-        "LOS RÍOS": 34
-      }
-    ]
-  },
-  "hotspots": [
-    {
-      "province": "GUAYAS",
-      "lat": -2.1,
-      "lon": -79.96,
-      "total": 362,
-      "women": 219,
-      "men": 143
-    },
-    {
-      "province": "STO DGO DE LOS TSÁCHILAS",
-      "lat": -0.25,
-      "lon": -79.19,
-      "total": 350,
-      "women": 211,
-      "men": 139
-    },
-    {
-      "province": "PICHINCHA",
-      "lat": -0.29,
-      "lon": -78.57,
-      "total": 338,
-      "women": 205,
-      "men": 133
-    },
-    {
-      "province": "GUAYAS",
-      "lat": -2.24,
-      "lon": -79.92,
-      "total": 293,
-      "women": 172,
-      "men": 121
-    },
-    {
-      "province": "PICHINCHA",
-      "lat": -0.27,
-      "lon": -78.54,
-      "total": 281,
-      "women": 186,
-      "men": 95
-    },
-    {
-      "province": "EL ORO",
-      "lat": -3.26,
-      "lon": -79.96,
-      "total": 280,
-      "women": 178,
-      "men": 102
-    },
-    {
-      "province": "GUAYAS",
-      "lat": -2.19,
-      "lon": -79.89,
-      "total": 266,
-      "women": 146,
-      "men": 120
-    },
-    {
-      "province": "PICHINCHA",
-      "lat": -0.22,
-      "lon": -78.51,
-      "total": 266,
-      "women": 137,
-      "men": 129
-    },
-    {
-      "province": "PICHINCHA",
-      "lat": -0.24,
-      "lon": -78.53,
-      "total": 260,
-      "women": 178,
-      "men": 82
-    },
-    {
-      "province": "PICHINCHA",
-      "lat": -0.33,
-      "lon": -78.57,
-      "total": 259,
-      "women": 155,
-      "men": 104
-    },
-    {
-      "province": "MORONA SANTIAGO",
-      "lat": -2.31,
-      "lon": -78.12,
-      "total": 251,
-      "women": 176,
-      "men": 75
-    },
-    {
-      "province": "PICHINCHA",
-      "lat": -0.12,
-      "lon": -78.47,
-      "total": 249,
-      "women": 144,
-      "men": 105
-    },
-    {
-      "province": "PICHINCHA",
-      "lat": -0.22,
-      "lon": -78.52,
-      "total": 243,
-      "women": 156,
-      "men": 87
-    },
-    {
-      "province": "GUAYAS",
-      "lat": -2.25,
-      "lon": -79.89,
-      "total": 239,
-      "women": 134,
-      "men": 105
-    },
-    {
-      "province": "GUAYAS",
-      "lat": -2.17,
-      "lon": -79.84,
-      "total": 237,
-      "women": 135,
-      "men": 102
-    },
-    {
-      "province": "CHIMBORAZO",
-      "lat": -1.67,
-      "lon": -78.66,
-      "total": 234,
-      "women": 155,
-      "men": 79
-    },
-    {
-      "province": "PICHINCHA",
-      "lat": -0.31,
-      "lon": -78.56,
-      "total": 230,
-      "women": 135,
-      "men": 95
-    },
-    {
-      "province": "PICHINCHA",
-      "lat": -0.26,
-      "lon": -78.52,
-      "total": 228,
-      "women": 152,
-      "men": 76
-    },
-    {
-      "province": "GUAYAS",
-      "lat": -2.28,
-      "lon": -79.88,
-      "total": 227,
-      "women": 119,
-      "men": 108
-    },
-    {
-      "province": "GUAYAS",
-      "lat": -2.07,
-      "lon": -79.93,
-      "total": 221,
-      "women": 137,
-      "men": 84
-    },
-    {
-      "province": "GUAYAS",
-      "lat": -2.12,
-      "lon": -80,
-      "total": 215,
-      "women": 130,
-      "men": 85
-    },
-    {
-      "province": "PICHINCHA",
-      "lat": -0.1,
-      "lon": -78.42,
-      "total": 213,
-      "women": 117,
-      "men": 96
-    },
-    {
-      "province": "PICHINCHA",
-      "lat": -0.24,
-      "lon": -78.52,
-      "total": 212,
-      "women": 134,
-      "men": 78
-    },
-    {
-      "province": "PICHINCHA",
-      "lat": -0.21,
-      "lon": -78.5,
-      "total": 203,
-      "women": 118,
-      "men": 85
-    },
-    {
-      "province": "PICHINCHA",
-      "lat": -0.25,
-      "lon": -78.52,
-      "total": 199,
-      "women": 118,
-      "men": 81
-    },
-    {
-      "province": "GUAYAS",
-      "lat": -2.08,
-      "lon": -79.93,
-      "total": 198,
-      "women": 120,
-      "men": 78
-    },
-    {
-      "province": "PICHINCHA",
-      "lat": -0.09,
-      "lon": -78.45,
-      "total": 197,
-      "women": 121,
-      "men": 76
-    },
-    {
-      "province": "PICHINCHA",
-      "lat": -0.12,
-      "lon": -78.5,
-      "total": 189,
-      "women": 110,
-      "men": 79
-    },
-    {
-      "province": "CHIMBORAZO",
-      "lat": -1.67,
-      "lon": -78.65,
-      "total": 188,
-      "women": 107,
-      "men": 81
-    },
-    {
-      "province": "PICHINCHA",
-      "lat": -0.26,
-      "lon": -78.55,
-      "total": 188,
-      "women": 123,
-      "men": 65
-    },
-    {
-      "province": "PICHINCHA",
-      "lat": -0.3,
-      "lon": -78.56,
-      "total": 181,
-      "women": 114,
-      "men": 67
-    },
-    {
-      "province": "PICHINCHA",
-      "lat": -0.2,
-      "lon": -78.49,
-      "total": 178,
-      "women": 77,
-      "men": 101
-    },
-    {
-      "province": "GUAYAS",
-      "lat": -2.2,
-      "lon": -79.91,
-      "total": 178,
-      "women": 100,
-      "men": 78
-    },
-    {
-      "province": "PICHINCHA",
-      "lat": -0.31,
-      "lon": -78.5,
-      "total": 174,
-      "women": 91,
-      "men": 83
-    },
-    {
-      "province": "IMBABURA",
-      "lat": 0.23,
-      "lon": -78.26,
-      "total": 172,
-      "women": 109,
-      "men": 63
-    },
-    {
-      "province": "PICHINCHA",
-      "lat": -0.19,
-      "lon": -78.51,
-      "total": 172,
-      "women": 104,
-      "men": 68
-    },
-    {
-      "province": "GUAYAS",
-      "lat": -2.22,
-      "lon": -79.94,
-      "total": 171,
-      "women": 95,
-      "men": 76
-    },
-    {
-      "province": "GUAYAS",
-      "lat": -2.21,
-      "lon": -79.91,
-      "total": 169,
-      "women": 89,
-      "men": 80
-    },
-    {
-      "province": "LOS RÍOS",
-      "lat": -1.01,
-      "lon": -79.47,
-      "total": 168,
-      "women": 136,
-      "men": 32
-    },
-    {
-      "province": "LOJA",
-      "lat": -4,
-      "lon": -79.2,
-      "total": 166,
-      "women": 100,
-      "men": 66
-    },
-    {
-      "province": "COTOPAXI",
-      "lat": -0.93,
-      "lon": -78.62,
-      "total": 165,
-      "women": 100,
-      "men": 65
-    },
-    {
-      "province": "ESMERALDAS",
-      "lat": 0.97,
-      "lon": -79.65,
-      "total": 165,
-      "women": 88,
-      "men": 77
-    },
-    {
-      "province": "PICHINCHA",
-      "lat": -0.09,
-      "lon": -78.47,
-      "total": 165,
-      "women": 79,
-      "men": 86
-    },
-    {
-      "province": "PICHINCHA",
-      "lat": -0.09,
-      "lon": -78.51,
-      "total": 164,
-      "women": 103,
-      "men": 61
-    },
-    {
-      "province": "PICHINCHA",
-      "lat": -0.33,
-      "lon": -78.45,
-      "total": 162,
-      "women": 94,
-      "men": 68
-    },
-    {
-      "province": "GUAYAS",
-      "lat": -2.27,
-      "lon": -79.88,
-      "total": 160,
-      "women": 100,
-      "men": 60
-    },
-    {
-      "province": "GUAYAS",
-      "lat": -2.13,
-      "lon": -79.94,
-      "total": 159,
-      "women": 100,
-      "men": 59
-    },
-    {
-      "province": "GUAYAS",
-      "lat": -2.23,
-      "lon": -79.94,
-      "total": 157,
-      "women": 96,
-      "men": 61
-    },
-    {
-      "province": "AZUAY",
-      "lat": -2.9,
-      "lon": -79.03,
-      "total": 157,
-      "women": 79,
-      "men": 78
-    },
-    {
-      "province": "PICHINCHA",
-      "lat": -0.21,
-      "lon": -78.4,
-      "total": 157,
-      "women": 87,
-      "men": 70
-    },
-    {
-      "province": "GUAYAS",
-      "lat": -2.2,
-      "lon": -79.9,
-      "total": 157,
-      "women": 89,
-      "men": 68
-    },
-    {
-      "province": "GUAYAS",
-      "lat": -2.16,
-      "lon": -79.92,
-      "total": 154,
-      "women": 91,
-      "men": 63
-    },
-    {
-      "province": "MORONA SANTIAGO",
-      "lat": -2.46,
-      "lon": -78.17,
-      "total": 154,
-      "women": 123,
-      "men": 31
-    },
-    {
-      "province": "GUAYAS",
-      "lat": -2.12,
-      "lon": -79.95,
-      "total": 153,
-      "women": 81,
-      "men": 72
-    },
-    {
-      "province": "AZUAY",
-      "lat": -2.9,
-      "lon": -79.01,
-      "total": 151,
-      "women": 95,
-      "men": 56
-    },
-    {
-      "province": "PICHINCHA",
-      "lat": -0.13,
-      "lon": -78.51,
-      "total": 150,
-      "women": 84,
-      "men": 66
-    },
-    {
-      "province": "PICHINCHA",
-      "lat": -0.29,
-      "lon": -78.55,
-      "total": 150,
-      "women": 90,
-      "men": 60
-    },
-    {
-      "province": "GUAYAS",
-      "lat": -2.21,
-      "lon": -79.93,
-      "total": 150,
-      "women": 88,
-      "men": 62
-    },
-    {
-      "province": "AZUAY",
-      "lat": -2.9,
-      "lon": -79,
-      "total": 148,
-      "women": 90,
-      "men": 58
-    },
-    {
-      "province": "PICHINCHA",
-      "lat": -0.29,
-      "lon": -78.52,
-      "total": 147,
-      "women": 89,
-      "men": 58
+      "classificationReport": [
+        {
+          "label": "Caso Solucionado",
+          "precision": 0.98,
+          "recall": 0.69,
+          "f1Score": 0.81,
+          "support": 14629
+        },
+        {
+          "label": "Riesgo Crítico",
+          "precision": 0.07,
+          "recall": 0.69,
+          "f1Score": 0.13,
+          "support": 511
+        },
+        {
+          "label": "Macro Avg",
+          "precision": 0.53,
+          "recall": 0.69,
+          "f1Score": 0.47,
+          "support": 15140
+        },
+        {
+          "label": "Weighted Avg",
+          "precision": 0.95,
+          "recall": 0.69,
+          "f1Score": 0.79,
+          "support": 15140
+        }
+      ],
+      "featureImportances": [
+        {
+          "name": "sexo",
+          "importance": 60.75
+        },
+        {
+          "name": "edad",
+          "importance": 27.32
+        },
+        {
+          "name": "circuito",
+          "importance": 11.92
+        }
+      ]
     }
-  ]
+  },
+  "prescriptive": {
+    "circuitPriority": [
+      {
+        "circuit": "LASCANO",
+        "district": "PAJÁN",
+        "province": "MANABÍ",
+        "totalCases": 1,
+        "activeCases": 1,
+        "resolutionRate": 0,
+        "averageSolutionDays": 0,
+        "priorityScore": 45.04,
+        "recommendedAction": "Monitoreo reforzado y coordinación territorial"
+      },
+      {
+        "circuit": "RIO NAPO",
+        "district": "AGUARICO",
+        "province": "ORELLANA",
+        "totalCases": 1,
+        "activeCases": 1,
+        "resolutionRate": 0,
+        "averageSolutionDays": 0,
+        "priorityScore": 45.04,
+        "recommendedAction": "Monitoreo reforzado y coordinación territorial"
+      },
+      {
+        "circuit": "PINZÓN",
+        "district": "GALÁPAGOS",
+        "province": "GALÁPAGOS",
+        "totalCases": 1,
+        "activeCases": 1,
+        "resolutionRate": 0,
+        "averageSolutionDays": 0,
+        "priorityScore": 45.04,
+        "recommendedAction": "Monitoreo reforzado y coordinación territorial"
+      },
+      {
+        "circuit": "RAMÓN CAMPAÑA",
+        "district": "PANGUA",
+        "province": "COTOPAXI",
+        "totalCases": 1,
+        "activeCases": 1,
+        "resolutionRate": 0,
+        "averageSolutionDays": 0,
+        "priorityScore": 45.04,
+        "recommendedAction": "Monitoreo reforzado y coordinación territorial"
+      },
+      {
+        "circuit": "CENTRO",
+        "district": "MILAGRO",
+        "province": "GUAYAS",
+        "totalCases": 941,
+        "activeCases": 32,
+        "resolutionRate": 0.9659936238044633,
+        "averageSolutionDays": 35.6,
+        "priorityScore": 37.32,
+        "recommendedAction": "Monitoreo reforzado y coordinación territorial"
+      },
+      {
+        "circuit": "MONTE SINAÍ",
+        "district": "NUEVA PROSPERINA",
+        "province": "GUAYAS",
+        "totalCases": 769,
+        "activeCases": 54,
+        "resolutionRate": 0.929778933680104,
+        "averageSolutionDays": 36.56,
+        "priorityScore": 32.57,
+        "recommendedAction": "Monitoreo reforzado y coordinación territorial"
+      },
+      {
+        "circuit": "NUEVO ROCAFUERTE",
+        "district": "AGUARICO",
+        "province": "ORELLANA",
+        "totalCases": 7,
+        "activeCases": 5,
+        "resolutionRate": 0.2857142857142857,
+        "averageSolutionDays": 3.5,
+        "priorityScore": 32.48,
+        "recommendedAction": "Monitoreo reforzado y coordinación territorial"
+      },
+      {
+        "circuit": "PUERTO LÓPEZ",
+        "district": "JIPIJAPA",
+        "province": "MANABÍ",
+        "totalCases": 58,
+        "activeCases": 37,
+        "resolutionRate": 0.3620689655172414,
+        "averageSolutionDays": 34.57,
+        "priorityScore": 31.63,
+        "recommendedAction": "Monitoreo reforzado y coordinación territorial"
+      },
+      {
+        "circuit": "LINARES",
+        "district": "EL VALLE DE QUIJOS",
+        "province": "NAPO",
+        "totalCases": 3,
+        "activeCases": 2,
+        "resolutionRate": 0.3333333333333333,
+        "averageSolutionDays": 58,
+        "priorityScore": 31.39,
+        "recommendedAction": "Monitoreo reforzado y coordinación territorial"
+      },
+      {
+        "circuit": "GUAMANÍ",
+        "district": "QUITUMBE",
+        "province": "PICHINCHA",
+        "totalCases": 784,
+        "activeCases": 11,
+        "resolutionRate": 0.985969387755102,
+        "averageSolutionDays": 36.41,
+        "priorityScore": 30.6,
+        "recommendedAction": "Monitoreo reforzado y coordinación territorial"
+      },
+      {
+        "circuit": "3 DE MAYO",
+        "district": "JIPIJAPA",
+        "province": "MANABÍ",
+        "totalCases": 6,
+        "activeCases": 4,
+        "resolutionRate": 0.3333333333333333,
+        "averageSolutionDays": 1,
+        "priorityScore": 30.25,
+        "recommendedAction": "Monitoreo reforzado y coordinación territorial"
+      },
+      {
+        "circuit": "YAMANA",
+        "district": "CATACOCHA",
+        "province": "LOJA",
+        "totalCases": 3,
+        "activeCases": 1,
+        "resolutionRate": 0.6666666666666666,
+        "averageSolutionDays": 505,
+        "priorityScore": 26.27,
+        "recommendedAction": "Monitoreo reforzado y coordinación territorial"
+      }
+    ]
+  }
 }

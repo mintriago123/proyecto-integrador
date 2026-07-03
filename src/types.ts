@@ -6,24 +6,14 @@ export interface MetricSummary {
   averageSolutionDays: number;
 }
 
-export interface NamedValue {
+export interface DistributionItem {
   name: string;
   value: number;
 }
 
-export interface MonthPoint {
-  month: string;
+export interface TimelinePoint {
+  label: string;
   total: number;
-}
-
-export interface YearPoint {
-  year: string;
-  total: number;
-}
-
-export interface ProvinceTrendPoint {
-  month: string;
-  [province: string]: string | number;
 }
 
 export interface HotspotPoint {
@@ -35,26 +25,95 @@ export interface HotspotPoint {
   men: number;
 }
 
+export interface ReasonDiagnostic {
+  name: string;
+  count: number;
+  avgDays: number;
+  medianDays: number;
+  minDays: number;
+  maxDays: number;
+}
+
+export interface ClassificationReportItem {
+  label: string;
+  precision: number;
+  recall: number;
+  f1Score: number;
+  support: number;
+}
+
+export interface ConfusionMatrixCell {
+  actual: string;
+  predicted: string;
+  value: number;
+}
+
+export interface FeatureImportance {
+  name: string;
+  importance: number;
+}
+
+export interface PredictiveSummary {
+  modelName: string;
+  targetDefinition: string;
+  trainingNote: string;
+  features: string[];
+  testSize: number;
+  accuracy: number;
+  confusionMatrix: {
+    labels: string[];
+    derivedFromRoundedReport: boolean;
+    values: ConfusionMatrixCell[];
+  };
+  classificationReport: ClassificationReportItem[];
+  featureImportances: FeatureImportance[];
+}
+
+export interface CircuitPriority {
+  circuit: string;
+  district: string;
+  province: string;
+  totalCases: number;
+  activeCases: number;
+  resolutionRate: number;
+  averageSolutionDays: number;
+  priorityScore: number;
+  recommendedAction: string;
+}
+
 export interface StorytellingData {
   generatedAt: string;
   period: {
     fromYear: number | null;
     toYear: number | null;
   };
-  metrics: MetricSummary;
-  distributions: {
-    byStatus: NamedValue[];
-    byAgeRange: NamedValue[];
-    bySex: NamedValue[];
-    byProvince: NamedValue[];
-    byMotivation: NamedValue[];
+  descriptive: {
+    metrics: MetricSummary;
+    distributions: {
+      byStatus: DistributionItem[];
+      byAgeRange: DistributionItem[];
+      bySex: DistributionItem[];
+      byEthnicity: DistributionItem[];
+      byProvince: DistributionItem[];
+      byDistrict: DistributionItem[];
+      byCircuit: DistributionItem[];
+    };
+    timelines: {
+      byMonth: TimelinePoint[];
+      byYear: TimelinePoint[];
+    };
+    hotspots: HotspotPoint[];
   };
-  timelines: {
-    byMonth: MonthPoint[];
-    byYear: YearPoint[];
-    provinceTrendByMonth: ProvinceTrendPoint[];
+  diagnostic: {
+    byReason: ReasonDiagnostic[];
+    byObservedMotivation: ReasonDiagnostic[];
   };
-  hotspots: HotspotPoint[];
+  predictive: {
+    modelSummary: PredictiveSummary;
+  };
+  prescriptive: {
+    circuitPriority: CircuitPriority[];
+  };
 }
 
 export interface CountryContext {
