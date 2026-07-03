@@ -434,6 +434,56 @@ body::before {
   font-family: "Source Serif 4", serif;
 }
 
+.api-callout-metrics {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.api-callout-metrics div {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.api-callout-metrics span {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #c9d7fb;
+}
+
+.api-callout-metrics strong {
+  display: block;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.api-callout-copy {
+  margin: 0 0 14px;
+}
+
+.api-endpoints {
+  display: grid;
+  gap: 8px;
+}
+
+.api-endpoints code {
+  display: block;
+  overflow-wrap: anywhere;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(7, 16, 31, 0.55);
+  color: #dbe6ff;
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
 .recharts-default-tooltip {
   border-radius: 14px !important;
   border: 1px solid #30406f !important;
@@ -508,6 +558,10 @@ body::before {
 
   .data-table {
     min-width: 680px;
+  }
+
+  .api-callout-metrics {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -615,6 +669,10 @@ body::before {
 
   .api-callout h3 {
     font-size: 1.8rem;
+  }
+
+  .api-endpoints code {
+    font-size: 0.82rem;
   }
 
   .matrix-cell {

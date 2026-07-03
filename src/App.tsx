@@ -1163,17 +1163,29 @@ function App() {
 
                   <div className="api-callout">
                     <p className="eyebrow">Fuentes</p>
-                    <h3>{country.countryName} conserva una lectura territorial comparable.</h3>
-                    <p>
-                      Endpoints:
-                      <br />
-                      `/api/worldbank/v2/country/ECU?format=json`
-                      <br />
-                      `/api/worldbank/v2/country/ECU/indicator/SP.POP.TOTL?format=json&per_page=12`
+                    <h3>El tamaño del país importa para leer la escala del fenómeno.</h3>
+                    <div className="api-callout-metrics">
+                      <div>
+                        <span>Habitantes</span>
+                        <strong>{compactNumber.format(country.population)}</strong>
+                      </div>
+                      <div>
+                        <span>Capital</span>
+                        <strong>{country.capital}</strong>
+                      </div>
+                      <div>
+                        <span>Inicio de semana</span>
+                        <strong>{country.startOfWeek}</strong>
+                      </div>
+                    </div>
+                    <p className="api-callout-copy">
+                      Las consultas externas no explican los casos; aportan escala país para
+                      interpretar el volumen local dentro del contexto nacional.
                     </p>
-                    <p>
-                      Inicio de semana: {country.startOfWeek} · Capital: {country.capital}
-                    </p>
+                    <div className="api-endpoints">
+                      <code>/api/worldbank/v2/country/ECU?format=json</code>
+                      <code>/api/worldbank/v2/country/ECU/indicator/SP.POP.TOTL?format=json&amp;per_page=12</code>
+                    </div>
                   </div>
                 </div>
               </>
