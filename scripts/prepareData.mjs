@@ -27,6 +27,25 @@ function cleanString(value) {
   return String(value).trim();
 }
 
+function isMissingCategory(value) {
+  const normalized = cleanString(value)
+    .normalize("NFD")
+    .replace(/\p{Diacritic}/gu, "")
+    .replace(/[\s_]+/g, "")
+    .toUpperCase();
+
+  return (
+    normalized === "" ||
+    normalized === "SINDATO" ||
+    normalized === "NOAPLICA" ||
+    normalized === "N/A" ||
+    normalized === "NA" ||
+    normalized === "NAN" ||
+    normalized === "NULL" ||
+    normalized === "NONE"
+  );
+}
+
 function parseNumber(value) {
   const normalized = cleanString(value).replace(",", ".");
   const parsedValue = Number.parseFloat(normalized);
@@ -44,7 +63,7 @@ function counts(keySelector, limit = undefined) {
   rows.forEach((row) => {
     const key = cleanString(keySelector(row));
 
-    if (!key) {
+    if (isMissingCategory(key)) {
       return;
     }
 
@@ -65,7 +84,7 @@ function summarizeDays(groupedRows, keySelector, limit = 10) {
     const key = cleanString(keySelector(row));
     const days = parseNumber(row.dias_solucion_dias);
 
-    if (!key || days === null) {
+    if (isMissingCategory(key) || days === null) {
       return;
     }
 
@@ -161,7 +180,12 @@ rows.forEach((row) => {
     }
   }
 
-  if (latitude !== null && longitude !== null && province && sex) {
+  if (
+    latitude !== null &&
+    longitude !== null &&
+    !isMissingCategory(province) &&
+    !isMissingCategory(sex)
+  ) {
     const roundedLat = Number(latitude.toFixed(2));
     const roundedLon = Number(longitude.toFixed(2));
     const hotspotKey = `${roundedLat}|${roundedLon}|${province}`;
@@ -184,11 +208,11 @@ rows.forEach((row) => {
     hotspotMap.set(hotspotKey, hotspot);
   }
 
-  if (circuit) {
+  if (!isMissingCategory(circuit)) {
     const entry = circuitsMap.get(circuit) ?? {
       circuit,
-      district: district || "SIN DATO",
-      province: province || "SIN DATO",
+      district: isMissingCategory(district) ? "No disponible" : district,
+      province: isMissingCategory(province) ? "No disponible" : province,
       totalCases: 0,
       activeCases: 0,
       sumSolvedDays: 0,

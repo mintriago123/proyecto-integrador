@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-03T04:22:08.261Z",
+  "generatedAt": "2026-07-03T18:46:30.259Z",
   "period": {
     "fromYear": 2017,
     "toYear": 2025
@@ -47,10 +47,6 @@
         {
           "name": "ADULTO MAYOR",
           "value": 2982
-        },
-        {
-          "name": "SIN_DATO",
-          "value": 5
         }
       ],
       "bySex": [
@@ -93,8 +89,8 @@
           "value": 727
         },
         {
-          "name": "SIN_DATO",
-          "value": 205
+          "name": "ASIATICO/A",
+          "value": 39
         }
       ],
       "byProvince": [
@@ -962,20 +958,20 @@
         "maxDays": 2581
       },
       {
-        "name": "SIN_DATO",
-        "count": 1032,
-        "avgDays": 77.9,
-        "medianDays": 10,
-        "minDays": 0,
-        "maxDays": 1709
-      },
-      {
         "name": "SECUESTRO EXTORSIVO (CON RESULTADO DE MUERTE)",
         "count": 7,
         "avgDays": 66.86,
         "medianDays": 9,
         "minDays": 3,
         "maxDays": 419
+      },
+      {
+        "name": "ABUSO SEXUAL",
+        "count": 18,
+        "avgDays": 64.61,
+        "medianDays": 4.5,
+        "minDays": 0,
+        "maxDays": 998
       }
     ]
   },
