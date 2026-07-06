@@ -323,11 +323,11 @@ function App() {
         setStoryData(storyJson);
 
         const [countryResult, populationResult] = await Promise.allSettled([
-          fetch("/api/worldbank/v2/country/ECU?format=json", {
+          fetch("/api/worldbank/country/ECU?format=json", {
             signal: controller.signal,
           }),
           fetch(
-            "/api/worldbank/v2/country/ECU/indicator/SP.POP.TOTL?format=json&per_page=12",
+            "/api/worldbank/country/ECU/indicator/SP.POP.TOTL?format=json&per_page=12",
             { signal: controller.signal },
           ),
         ]);
@@ -1183,8 +1183,8 @@ function App() {
                       interpretar el volumen local dentro del contexto nacional.
                     </p>
                     <div className="api-endpoints">
-                      <code>/api/worldbank/v2/country/ECU?format=json</code>
-                      <code>/api/worldbank/v2/country/ECU/indicator/SP.POP.TOTL?format=json&amp;per_page=12</code>
+                      <code>/api/worldbank/country/ECU?format=json</code>
+                      <code>/api/worldbank/country/ECU/indicator/SP.POP.TOTL?format=json&amp;per_page=12</code>
                     </div>
                   </div>
                 </div>

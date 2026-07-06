@@ -12,6 +12,14 @@ function getPathSegments(pathParam) {
   return [];
 }
 
+function normalizePathSegments(pathSegments) {
+  if (pathSegments[0] === "v2") {
+    return pathSegments.slice(1);
+  }
+
+  return pathSegments;
+}
+
 function appendQueryParams(targetUrl, query) {
   for (const [key, value] of Object.entries(query)) {
     if (key === "path" || value === undefined) {
@@ -30,7 +38,7 @@ function appendQueryParams(targetUrl, query) {
 }
 
 export default async function handler(req, res) {
-  const pathSegments = getPathSegments(req.query.path);
+  const pathSegments = normalizePathSegments(getPathSegments(req.query.path));
   const targetUrl = new URL(
     `/v2/${pathSegments.map(encodeURIComponent).join("/")}`,
     WORLD_BANK_BASE_URL,
