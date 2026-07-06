@@ -57,6 +57,24 @@ function round(value, decimals = 2) {
   return Math.round(value * factor) / factor;
 }
 
+function percentile(values, percentileValue) {
+  if (values.length === 0) {
+    return 0;
+  }
+
+  const sorted = values.toSorted((a, b) => a - b);
+  const index = (sorted.length - 1) * percentileValue;
+  const lowerIndex = Math.floor(index);
+  const upperIndex = Math.ceil(index);
+
+  if (lowerIndex === upperIndex) {
+    return sorted[lowerIndex];
+  }
+
+  const weight = index - lowerIndex;
+  return sorted[lowerIndex] * (1 - weight) + sorted[upperIndex] * weight;
+}
+
 function counts(keySelector, limit = undefined) {
   const map = new Map();
 
@@ -245,22 +263,30 @@ const circuitEntries = Array.from(circuitsMap.values()).map((entry) => ({
 }));
 
 const maxTotalCases = Math.max(...circuitEntries.map((entry) => entry.totalCases), 1);
-const maxAverageSolutionDays = Math.max(
-  ...circuitEntries.map((entry) => entry.averageSolutionDays),
+const p90AverageSolutionDays = Math.max(
+  percentile(
+    circuitEntries
+      .map((entry) => entry.averageSolutionDays)
+      .filter((value) => value > 0),
+    0.9,
+  ),
   1,
 );
 
 const circuitPriority = circuitEntries
   .map((entry) => {
-    const volumeWeight = entry.totalCases / maxTotalCases;
-    const activeWeight = entry.totalCases > 0 ? entry.activeCases / entry.totalCases : 0;
-    const lowResolutionWeight = 1 - entry.resolutionRate;
-    const timeWeight = entry.averageSolutionDays / maxAverageSolutionDays;
+    const reliabilityWeight = Math.min(1, entry.totalCases / 20);
+    const volumeWeight = Math.log1p(entry.totalCases) / Math.log1p(maxTotalCases);
+    const activeWeight =
+      (entry.totalCases > 0 ? entry.activeCases / entry.totalCases : 0) * reliabilityWeight;
+    const lowResolutionWeight = (1 - entry.resolutionRate) * reliabilityWeight;
+    const timeWeight =
+      Math.min(1, entry.averageSolutionDays / p90AverageSolutionDays) * reliabilityWeight;
     const priorityScore = round(
-      (volumeWeight * 0.35 +
+      (volumeWeight * 0.4 +
         activeWeight * 0.25 +
         lowResolutionWeight * 0.2 +
-        timeWeight * 0.2) *
+        timeWeight * 0.15) *
         100,
     );
 
