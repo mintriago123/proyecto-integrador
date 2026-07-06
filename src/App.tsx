@@ -82,6 +82,24 @@ function formatDays(value: number) {
   return `${value.toFixed(1)} días`;
 }
 
+async function readJsonResponse<T>(response: Response): Promise<T | null> {
+  if (!response.ok) {
+    return null;
+  }
+
+  const contentType = response.headers.get("content-type") ?? "";
+
+  if (!contentType.includes("application/json")) {
+    return null;
+  }
+
+  try {
+    return (await response.json()) as T;
+  } catch {
+    return null;
+  }
+}
+
 function sentenceFromTop(items: DistributionItem[], fallbackLabel: string) {
   if (items.length === 0) {
     return fallbackLabel;
@@ -301,8 +319,9 @@ function CircuitTable({ circuits }: { circuits: CircuitPriority[] }) {
 
 function App() {
   const [storyData, setStoryData] = useState<StorytellingData | null>(null);
-  const [country, setCountry] = useState<CountryContext | null>(null);
-  const [populationSeries, setPopulationSeries] = useState<PopulationSeriesPoint[]>([]);
+  const [country, setCountry] = useState<CountryContext>(fallbackCountry);
+  const [populationSeries, setPopulationSeries] =
+    useState<PopulationSeriesPoint[]>(fallbackPopulationSeries);
   const [error, setError] = useState<string | null>(null);
   const isCompact = useCompactLayout();
 
@@ -333,48 +352,48 @@ function App() {
         ]);
 
         if (countryResult.status === "fulfilled" && countryResult.value.ok) {
-          const countryJson = (await countryResult.value.json()) as [
+          const countryJson = await readJsonResponse<[
             unknown,
             Array<{
               name: string;
               capitalCity: string;
               region: { value: string };
             }>,
-          ];
-          const countryEntry = countryJson[1]?.[0];
+          ]>(countryResult.value);
+          const countryEntry = countryJson?.[1]?.[0];
 
-          setCountry({
-            countryName: countryEntry?.name ?? fallbackCountry.countryName,
-            capital: countryEntry?.capitalCity ?? fallbackCountry.capital,
-            population: fallbackCountry.population,
-            area: fallbackCountry.area,
-            region: countryEntry?.region.value ?? fallbackCountry.region,
-            flag: fallbackCountry.flag,
-            startOfWeek: fallbackCountry.startOfWeek,
-          });
-        } else {
-          setCountry(fallbackCountry);
+          if (countryEntry) {
+            setCountry({
+              countryName: countryEntry.name || fallbackCountry.countryName,
+              capital: countryEntry.capitalCity || fallbackCountry.capital,
+              population: fallbackCountry.population,
+              area: fallbackCountry.area,
+              region: countryEntry.region?.value || fallbackCountry.region,
+              flag: fallbackCountry.flag,
+              startOfWeek: fallbackCountry.startOfWeek,
+            });
+          }
         }
 
         if (populationResult.status === "fulfilled" && populationResult.value.ok) {
-          const populationJson = (await populationResult.value.json()) as [
+          const populationJson = await readJsonResponse<[
             unknown,
             Array<{ date: string; value: number | null }>,
-          ];
+          ]>(populationResult.value);
 
-          const populationPoints = (populationJson[1] ?? [])
-            .filter((item) => item.value !== null)
-            .map((item) => ({
-              year: item.date,
-              population: item.value ?? 0,
-            }))
-            .sort((a, b) => Number(a.year) - Number(b.year));
+          if (populationJson) {
+            const populationPoints = (populationJson[1] ?? [])
+              .filter((item) => item.value !== null)
+              .map((item) => ({
+                year: item.date,
+                population: item.value ?? 0,
+              }))
+              .sort((a, b) => Number(a.year) - Number(b.year));
 
-          setPopulationSeries(
-            populationPoints.length > 0 ? populationPoints : fallbackPopulationSeries,
-          );
-        } else {
-          setPopulationSeries(fallbackPopulationSeries);
+            if (populationPoints.length > 0) {
+              setPopulationSeries(populationPoints);
+            }
+          }
         }
       } catch (loadError) {
         if ((loadError as Error).name === "AbortError") {
@@ -393,7 +412,7 @@ function App() {
     return <main className="status-panel">{error}</main>;
   }
 
-  if (!storyData || !country) {
+  if (!storyData) {
     return <main className="status-panel">Cargando historia de datos...</main>;
   }
 
