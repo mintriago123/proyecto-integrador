@@ -8,7 +8,7 @@ export default defineConfig({
       "/api/worldbank": {
         target: "https://api.worldbank.org",
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api\/worldbank/, ""),
+        rewrite: (path) => path.replace(/^\/api\/worldbank/, "/v2"),
       },
     },
   },

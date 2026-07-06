@@ -53,8 +53,8 @@ const fallbackCountry: CountryContext = {
   population: 18001200,
   area: 256370,
   region: "Americas",
+  incomeLevel: "Ingreso mediano alto",
   flag: "/ecuador-flag.svg",
-  startOfWeek: "monday",
 };
 
 const fallbackPopulationSeries: PopulationSeriesPoint[] = [
@@ -80,6 +80,27 @@ function formatMonth(label: string) {
 
 function formatDays(value: number) {
   return `${value.toFixed(1)} días`;
+}
+
+function translateIncomeLevel(value: string) {
+  const normalizedValue = value.trim().toLowerCase();
+
+  switch (normalizedValue) {
+    case "high income":
+      return "Ingreso alto";
+    case "upper middle income":
+      return "Ingreso mediano alto";
+    case "lower middle income":
+      return "Ingreso mediano bajo";
+    case "low income":
+      return "Ingreso bajo";
+    case "not classified":
+      return "Sin clasificar";
+    case "aggregates":
+      return "Agregado regional";
+    default:
+      return value;
+  }
 }
 
 async function readJsonResponse<T>(response: Response): Promise<T | null> {
@@ -358,6 +379,7 @@ function App() {
               name: string;
               capitalCity: string;
               region: { value: string };
+              incomeLevel: { value: string };
             }>,
           ]>(countryResult.value);
           const countryEntry = countryJson?.[1]?.[0];
@@ -369,8 +391,8 @@ function App() {
               population: fallbackCountry.population,
               area: fallbackCountry.area,
               region: countryEntry.region?.value || fallbackCountry.region,
+              incomeLevel: countryEntry.incomeLevel?.value || fallbackCountry.incomeLevel,
               flag: fallbackCountry.flag,
-              startOfWeek: fallbackCountry.startOfWeek,
             });
           }
         }
@@ -392,6 +414,10 @@ function App() {
 
             if (populationPoints.length > 0) {
               setPopulationSeries(populationPoints);
+              setCountry((currentCountry) => ({
+                ...currentCountry,
+                population: populationPoints.at(-1)?.population ?? currentCountry.population,
+              }));
             }
           }
         }
@@ -1193,8 +1219,8 @@ function App() {
                         <strong>{country.capital}</strong>
                       </div>
                       <div>
-                        <span>Inicio de semana</span>
-                        <strong>{country.startOfWeek}</strong>
+                        <span>Nivel de ingreso</span>
+                        <strong>{translateIncomeLevel(country.incomeLevel)}</strong>
                       </div>
                     </div>
                     <p className="api-callout-copy">
@@ -1202,8 +1228,8 @@ function App() {
                       interpretar el volumen local dentro del contexto nacional.
                     </p>
                     <div className="api-endpoints">
-                      <code>/api/worldbank/country/ECU?format=json</code>
-                      <code>/api/worldbank/country/ECU/indicator/SP.POP.TOTL?format=json&amp;per_page=12</code>
+                      <code>Fuente externa: World Bank Country API</code>
+                      <code>Indicador consultado: Population, total (SP.POP.TOTL)</code>
                     </div>
                   </div>
                 </div>

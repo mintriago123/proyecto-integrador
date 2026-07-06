@@ -122,8 +122,8 @@ export interface CountryContext {
   population: number;
   area: number;
   region: string;
+  incomeLevel: string;
   flag: string;
-  startOfWeek: string;
 }
 
 export interface PopulationSeriesPoint {
